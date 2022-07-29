@@ -1,15 +1,33 @@
-if not Metrostroi or not Metrostroi.Version or Metrostroi.Version < 1496343479 then Msg("This Metrostroi version isn't compatible for helper.\n") end
+--if not Metrostroi or not Metrostroi.Version or Metrostroi.Version < 1496343479 then Msg("This Metrostroi version isn't compatible for helper.\n") end
 AddCSLuaFile()
 if SERVER then
 	util.AddNetworkString("MTHelper")
 
 	local trainFilter = {
-		"gmod_subway_81-717_mvm",
-		"gmod_subway_81-717_lvz",
 		"gmod_subway_81-502",
+		"gmod_subway_81-502k",
+		"gmod_subway_em508",
+		"gmod_subway_81-540_2",
+		"gmod_subway_81-540_2k",
+		"gmod_subway_81-702",
 		"gmod_subway_81-703",
 		"gmod_subway_ezh",
 		"gmod_subway_ezh3",
+		"gmod_subway_81-710",
+		"gmod_subway_81-717_freight",
+		"gmod_subway_81-717_mvm",
+		"gmod_subway_81-717_lvz",
+		"gmod_subway_81-717_2",
+		"gmod_subway_81-717_2k",
+		"gmod_subway_81-7175p",
+		"gmod_subway_81-717_5a",
+		"gmod_subway_81-717_5k",
+		"gmod_subway_81-717_6",
+    	"gmod_subway_81-540",
+    	"gmod_subway_81-540_8",
+    	"gmod_subway_81-717_5m",
+    	"gmod_subway_81-705_old",
+	"gmod_subway_81-540_1"
 	}
 	local trains = {}
 	hook.Add("PlayerEnteredVehicle", "MTHelperEnter", function(ply, veh, _)
@@ -71,7 +89,7 @@ else
 	})
 
 	local function HelperShow()
-		print(train)
+		--print(train)
 
 		if GetConVar("metrostroi_helper"):GetInt() == 1 then
 
